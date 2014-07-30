@@ -29,6 +29,17 @@
  
 		$result = curl_exec($ch);
 		curl_close ($ch);
+
+		// For Debugging
+		// $data = json_decode($result);
 		
+		//if ($data->error){
+		//	$mailsubject = $data->code .' : '.$data->error."\n";
+		//} else {
+		//	$mailsubject = "There was a new email address added to MailChimp.";
+		//}
+		
+		//mail("*****@*****.***", "MailChimp Subscription", $mailsubject, "From: <*****@*****.***>");
+				
 
 ?>
