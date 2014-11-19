@@ -36,7 +36,7 @@
 
 		$data = json_decode($result);
 		if ($data->error){
-			$mailsubject = $data->code .' : '.$data->error."\n ".$subscriber_email;
+			$mailsubject = $data->code .' : '.$data->error."\n $subscriber_email";
 			mail($your_email, "MailChimp Subscribe Failed", $mailsubject, "From: <$your_server_email>");
 		}
 		
