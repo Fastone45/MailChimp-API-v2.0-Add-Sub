@@ -7,7 +7,7 @@
 		$subscriber_email = "*****@*****.***";
 		$your_email = "*****@*****.***";
 		$your_server_email = "*****@*****.***";
-		$your_sugar = "***";
+		$your_mailchimp_server = "***";
 		
 		$emailstruct = array('email'=>$subscriber_email); 
 		$doubleoptin = "true";
@@ -23,7 +23,7 @@
 
 		$payload = json_encode($data);
 
-		$submit_url = "https://$your_sugar.api.mailchimp.com/2.0/lists/subscribe.json";
+		$submit_url = "https://$your_mailchimp_server.api.mailchimp.com/2.0/lists/subscribe.json";
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $submit_url);
